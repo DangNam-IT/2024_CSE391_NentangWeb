@@ -1,0 +1,118 @@
+<!--                              BỘ CHỌN (selector) 
+$('.class') Chọn thành phần theo class cụ thể. 
+$('#id') Chọn thành phần theo id cụ thể. 
+$('selector1, selector2, selectorN') Chọn nhiều thành phần cùng lúc. 
+$('tag:eq(n)') Chọn thành phần thứ n. 
+$('tag:gt(n)') chọn các thành phần với chỉ số lớn hơn n. 
+$('tag:lt(n)') Chọn các thành phần với chỉ số nhỏ hơn n. 
+$('tag:even') Chọn các thành phần ở vị trí lẻ. 
+$('tag:odd') Chọn các thành phần ở vị trí chẵn. 
+$('tag:first-child') Chọn các thành phần con ở vị trí đầu tiên. 
+$('tag:last-child') Chọn các thành phần con ở vị trí cuối cùng. 
+$('tag:nth-child(n)') Chọn thành phần thứ n trong thành phần cha. 
+$('tag[attribute="value"]') Chọn thành phần có thuộc tính với giá trị 
+xác định. 
+                                   XỬ LÝ HTML
+.add() thêm thành phần. 
+.remove() Loại bỏ thành phần được xác định. 
+.addClass() thêm class cho thành phần. 
+.removeClass() xóa class của thành thành phần. 
+.after() Chèn nội dung vào ngay sau mỗi thành phần đã có. 
+.before() Chèn nội dung vào ngay trước mỗi thành phần đã có. 
+.insertAfter() Chèn hoặc di chuyển một thành phần vào ngay sau mục 
+tiêu được chọn. 
+.insertBefore() Chèn hoặc di chuyển một thành phần vào ngay trước 
+mục tiêu được chọn. 
+.append() Chèn nội dung vào trong thành phần đã có, sắp xếp ở vị trí 
+đầu. 
+.appendTo() Chèn nội dung vào trong thành phần đã có, sắp xếp ở vị trí 
+sau cùng. 
+.prepend() Chèn nội dung vào trong thành phần ở vị trí đầu tiên. 
+.prependTo() Chèn nội dung vào thành phần đã có, sắp xếp ở vị trí đầu 
+tiên. 
+.attr() Xác định thuộc tính của thành phần. 
+.html() Lấy hoặc gán nội dung HTML cho thành phần. 
+.text() Lấy nội dung text của thành phần, hoặc thay đổi nội dung text cho 
+thành phần. 
+.val() Lấy giá trị của thành phần, hoặc thay đổi giá trị cho thành phần. 
+.change() xác định một thành phần đã được thay đổi. 
+.clone() Tạo một bản sao (copy) cho thành phần. 
+.height() Xác định hoặc gán giá trị chiều cao cho thành phần. 
+.width() Xác định hoặc gán giá trị chiều rộng cho thành phần. 
+                                    HIỆU ỨNG (effects) 
+.fadeIn() Hiển thị các thành phần phù hợp với hiệu ứng rõ dần (fade in). 
+.fadeOut() Ẩn các thành phần phù hợp với hiệu ứng mờ dần (fade). 
+.fadeToggle() Luân phiên hiển thị hoặc biến mất thành phần. 
+.slideDown() Hiển thị các thành phần phù hợp với hiệu ứng chuyển động 
+trượt (slide). 
+.slideUp() Ẩn thị các thành phần phù hợp với hiệu ứng chuyển động 
+trượt (slide). 
+.slideToggle() Hiển thị và ẩn các thành phần phù hợp với hiệu ứng 
+chuyển động trượt (slide). 
+.hide() Ẩn thành phần. 
+.show() Hiện thành phần. 
+.animate() Thực hiện một chuyển động. 
+.setTimeout() xác định thời gian sau bao lâu thì thực hiện hành động. 
+.setInterval() xác định thời gian sau bao lâu thì thực hiện hành động, và 
+hành động này được thực hiện liên tục. 
+                                      SỰ KIỆN (events) 
+.click() Kích hoạt sự kiện click trên thành phần hoặc ràng buộc xử lý 
+một sự kiện tới sự kiện click trong javascript. 
+.hover() Kích hoạt sự kiện hover trên thành phần hoặc ràng buộc xử lý 
+một sự kiện tới sự kiện hover trong javascript. 
+.bind() Được sử dụng để đính kèm xử lý một sự kiện cho thành phần. 
+.resize() Ràng buộc một xử lý sự kiện resize hoặc kích hoạt sự kiện trên 
+thành phần. 
+                                    TƯƠNG TÁC CÁC THÀNH PHẦN
+.css() Thêm style cho thành phần, hoặc lấy giá trị style của thành phần. 
+.each() Thực hiện một hành động cho mỗi phần tử. 
+.find() Tìm thành phần trong thành phần cha. 
+.length Xác định số lượng thành phần trong jQuery Object. 
+
+            CÚ PHÁP
+$(selector). action()
+-->
+<!doctype html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<title>Học web chuẩn</title> 
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script> -->
+<script>
+  $(function(){ 
+    /* Code viết ở đây ↓ */
+
+    //bấm vào nút thì nội dung thay đổi
+    // $("button").click(function(){
+    //     $("#box div").html("menu1");
+    // })
+
+    // di chuột vào phần tử có id "box", nền của nó chuyển sang đỏ 
+    // chuột rời khỏi phần tử, nền sẽ trở lại màu trắng
+    $("#box").mouseenter(function(){
+    $(this).css("background-color", "yellow");
+    });
+  
+    $("#box").mouseleave(function(){
+    $(this).css("background-color", "white");
+    });
+
+    //Chèn nội dung vào trong thành phần đã có, sắp xếp ở vị trí đầu
+    $("button").click(function(){
+        $("#box div").append("<p>add</p>");
+    })
+   
+  }); 
+</script> 
+</head> 
+ 
+<body> 
+<div id="box"> 
+  <h3>Title</h3> 
+  <div>In suscipit nec velit sit amet convallis. Integer</div> 
+</div> 
+<button type="button">Click</button> 
+</body> 
+</html>
